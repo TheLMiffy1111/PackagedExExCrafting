@@ -1,0 +1,8 @@
+{
+	"parent": "block/cube_bottom_top",
+	"textures": {
+		"side": "packagedexexcrafting:block/epic_crafter_side",
+		"top": "packagedexexcrafting:block/epic_crafter_top",
+		"bottom": "packagedexexcrafting:block/epic_crafter_bottom"
+	}
+}
