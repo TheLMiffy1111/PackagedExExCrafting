@@ -24,7 +24,6 @@ import thelm.packagedauto.recipe.ProcessingPackageRecipeType;
 import thelm.packagedauto.util.MiscHelper;
 import thelm.packagedauto.util.PackagePattern;
 import thelm.packagedexcrafting.recipe.ITablePackageRecipeInfo;
-import thelm.packagedexcrafting.recipe.UltimatePackageRecipeInfo;
 
 public class EpicPackageRecipeInfo implements ITablePackageRecipeInfo {
 

@@ -1,14 +1,10 @@
 package thelm.packagedexexcrafting.client.screen;
 
-import com.mojang.blaze3d.systems.RenderSystem;
-
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.item.ItemStack;
 import thelm.packagedauto.client.screen.BaseScreen;
-import thelm.packagedexexcrafting.block.EpicCrafterBlock;
 import thelm.packagedexexcrafting.menu.EpicCrafterMenu;
 
 public class EpicCrafterScreen extends BaseScreen<EpicCrafterMenu> {
