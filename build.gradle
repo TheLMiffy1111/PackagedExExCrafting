@@ -165,23 +165,23 @@ publishMods {
 	file = remapJar.archiveFile
 	version = displayName = "${mcVersion}-${project.version}"
 	changelog = file("changelog.md").text
-	type = STABLE
+	type = BETA
 	modLoaders.addAll("forge", "neoforge")
 	additionalFiles.from(remapSourcesJar.archiveFile)
 
 	curseforge {
 		accessToken = providers.gradleProperty("curseforge.token")
-		projectId = ""
+		projectId = "1028872"
 		minecraftVersions.add(mcVersion)
-		requires "packagedauto"
+		requires "packagedauto", "packagedexcrafting", "extended-crafting-monifactory-edition"
 		optional "applied-energistics-2"
 	}
 
 	modrinth {
 		accessToken = providers.gradleProperty("modrinth.token")
-		projectId = ""
+		projectId = "h3Ycewyr"
 		minecraftVersions.add(mcVersion)
-		requires "packagedauto"
+		requires "packagedauto", "packagedexcrafting"
 		optional "ae2"
 	}
 }
