@@ -46,23 +46,23 @@ public class EpicPackageRecipeInfo implements ITablePackageRecipeInfo {
 		for(int i = 0; i < 121 && i < matrixList.size(); ++i) {
 			matrix.setItem(i, matrixList.get(i));
 		}
+		List<ItemStack> actualInput = MiscHelper.INSTANCE.condenseStacks(matrix);
+		if(actualInput.size() <= 81) {
+			input.addAll(actualInput);
+		}
+		else for(int i = 0; i*9 < actualInput.size(); ++i) {
+			IPackageRecipeInfo subRecipe = ProcessingPackageRecipeType.INSTANCE.getNewRecipeInfo();
+			subRecipe.generateFromStacks(actualInput.subList(i*9, Math.min(9+i*9, actualInput.size())), List.of(), null);
+			IPackagePattern subPattern = subRecipe.getPatterns().get(0);
+			extraPatterns.add(subPattern);
+			input.add(subPattern.getOutput());
+		}
+		for(int i = 0; i*9 < input.size(); ++i) {
+			patterns.add(new PackagePattern(this, i));
+		}
 		if(recipe instanceof ITableRecipe tableRecipe) {
 			this.recipe = tableRecipe;
-			List<ItemStack> actualInput = MiscHelper.INSTANCE.condenseStacks(matrix);
-			if(actualInput.size() <= 81) {
-				input.addAll(actualInput);
-			}
-			else for(int i = 0; i*9 < actualInput.size(); ++i) {
-				IPackageRecipeInfo subRecipe = ProcessingPackageRecipeType.INSTANCE.getNewRecipeInfo();
-				subRecipe.generateFromStacks(actualInput.subList(i*9, Math.min(9+i*9, actualInput.size())), List.of(), null);
-				IPackagePattern subPattern = subRecipe.getPatterns().get(0);
-				extraPatterns.add(subPattern);
-				input.add(subPattern.getOutput());
-			}
 			output = this.recipe.assemble(matrix, MiscHelper.INSTANCE.getRegistryAccess()).copy();
-			for(int i = 0; i*9 < input.size(); ++i) {
-				patterns.add(new PackagePattern(this, i));
-			}
 		}
 	}
 
