@@ -46,6 +46,10 @@ public class EpicPackageRecipeInfo implements ITablePackageRecipeInfo {
 		for(int i = 0; i < 121 && i < matrixList.size(); ++i) {
 			matrix.setItem(i, matrixList.get(i));
 		}
+		if(recipe instanceof ITableRecipe tableRecipe) {
+			this.recipe = tableRecipe;
+			output = this.recipe.assemble(matrix, MiscHelper.INSTANCE.getRegistryAccess()).copy();
+		}
 		List<ItemStack> actualInput = MiscHelper.INSTANCE.condenseStacks(matrix);
 		if(actualInput.size() <= 81) {
 			input.addAll(actualInput);
@@ -59,10 +63,6 @@ public class EpicPackageRecipeInfo implements ITablePackageRecipeInfo {
 		}
 		for(int i = 0; i*9 < input.size(); ++i) {
 			patterns.add(new PackagePattern(this, i));
-		}
-		if(recipe instanceof ITableRecipe tableRecipe) {
-			this.recipe = tableRecipe;
-			output = this.recipe.assemble(matrix, MiscHelper.INSTANCE.getRegistryAccess()).copy();
 		}
 	}
 
