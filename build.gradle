@@ -170,7 +170,7 @@ publishMods {
 		accessToken = providers.gradleProperty("curseforge.token")
 		projectId = "1028872"
 		minecraftVersions.add(mcVersion)
-		requires "packagedauto", "packagedexcrafting", "extended-crafting-monifactory-edition"
+		requires "packagedauto", "packagedexcrafting", "extended-crafting-expanded"
 		optional "applied-energistics-2"
 	}
 
