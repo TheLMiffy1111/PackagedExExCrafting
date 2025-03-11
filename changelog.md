@@ -1,1 +1,2 @@
-Fix AE2 grid node data reading  
+Added entries to PackagedAuto Patchouli guide  
+Optimized images with oxipng  
