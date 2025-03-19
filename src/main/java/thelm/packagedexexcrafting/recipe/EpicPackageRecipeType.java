@@ -28,7 +28,7 @@ public class EpicPackageRecipeType implements IPackageRecipeType {
 	public static final ResourceLocation NAME = new ResourceLocation("packagedexexcrafting:epic");
 	public static final IntSet SLOTS;
 	public static final IntSet SLOTS_BORDER;
-	public static final List<ResourceLocation> CATEGORIES = ImmutableList.of(
+	public static final List<ResourceLocation> CATEGORIES = List.of(
 			new ResourceLocation("extendedcrafting:epic_crafting"),
 			new ResourceLocation("extendedcrafting:ultimate_crafting"),
 			new ResourceLocation("extendedcrafting:elite_crafting"),
