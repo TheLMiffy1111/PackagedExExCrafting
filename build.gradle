@@ -119,7 +119,7 @@ dependencies {
 
 	// Dependencies
 	modImplementation "thelm.packagedauto:PackagedAuto-1.20.1:3.4.11.37"
-	modImplementation "thelm.packagedexcrafting:PackagedExCrafting-1.20.1:3.4.0.17"
+	modImplementation "thelm.packagedexcrafting:PackagedExCrafting-1.20.1:3.4.0.18"
 	modImplementation "curse.maven:cucumber-272335:5587888"
 	modImplementation "curse.maven:extended-crafting-expanded-1017786:5613251"
 	modImplementation("mezz.jei:jei-1.20.1-forge:15.20.0.112") {transitive = false}
