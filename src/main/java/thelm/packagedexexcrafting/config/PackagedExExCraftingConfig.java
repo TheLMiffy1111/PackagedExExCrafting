@@ -16,6 +16,7 @@ public class PackagedExExCraftingConfig {
 	public static ForgeConfigSpec.IntValue epicCrafterEnergyUsage;
 	public static ForgeConfigSpec.BooleanValue epicCrafterDrawMEEnergy;
 
+	@SuppressWarnings("removal")
 	public static void registerConfig() {
 		buildConfig();
 		ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, serverSpec);
