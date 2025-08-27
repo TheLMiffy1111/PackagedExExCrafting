@@ -118,7 +118,7 @@ dependencies {
 	forge "net.minecraftforge:forge:1.20.1-47.4.4"
 
 	// Dependencies
-	modImplementation "thelm.packagedauto:PackagedAuto-1.20.1:3.4.13.41"
+	modImplementation "thelm.packagedauto:PackagedAuto-1.20.1:3.4.14.44"
 	modImplementation "thelm.packagedexcrafting:PackagedExCrafting-1.20.1:3.4.0.20"
 	modImplementation "curse.maven:cucumber-272335:6680445"
 	modImplementation "curse.maven:extended-crafting-expanded-1017786:5613251"
